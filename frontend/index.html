@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Help Nearby</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🆘 Help Nearby</h1>
+        <p>Connect people who need help with people who can help.</p>
+    </header>
+
+    <main>
+
+        <!-- Create Request -->
+        <section class="card">
+
+            <h2>Post a Help Request</h2>
+
+            <form id="helpForm">
+
+                <label>Help Type</label>
+                <select id="helpType" required>
+                    <option value="">Select help type</option>
+                    <option value="Blood">🩸 Blood</option>
+                    <option value="Medicine">💊 Medicine</option>
+                    <option value="Elderly Assistance">👵 Elderly Assistance</option>
+                    <option value="Volunteer">🤝 Volunteer</option>
+                    <option value="Emergency Transport">🚑 Emergency Transport</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label>Description</label>
+                <textarea
+                    id="description"
+                    placeholder="Describe what help is needed..."
+                    required>
+                </textarea>
+
+                <label>Location</label>
+                <input
+                    type="text"
+                    id="location"
+                    placeholder="Example: Mirpur, Dhaka"
+                    required>
+
+                <label>Contact Number</label>
+                <input
+                    type="text"
+                    id="contact"
+                    placeholder="01XXXXXXXXX"
+                    required>
+
+                <label>Urgency</label>
+                <select id="urgency" required>
+                    <option value="Low">Low</option>
+                    <option value="Medium" selected>Medium</option>
+                    <option value="High">High</option>
+                </select>
+
+                <button type="submit">
+                    Post Help Request
+                </button>
+
+            </form>
+
+            <p id="message"></p>
+
+        </section>
+
+
+        <!-- Help Requests -->
+        <section>
+
+            <div class="section-header">
+
+                <h2>People Needing Help</h2>
+
+                <select id="filter">
+                    <option value="All">All Requests</option>
+                    <option value="Open">Open</option>
+                    <option value="Accepted">Accepted</option>
+                    <option value="Completed">Completed</option>
+                </select>
+
+            </div>
+
+            <div id="requestList"></div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Help Nearby © 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
